@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<prism:PrismApplication 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:prism="clr-namespace:Prism.Unity;assembly=Prim.Unity.Forms"
+    xmlns:converters="clr-namespace:XamarinSample.Converters;assembly=XamarinSample"
+    x:Class="XamarinSample.App">
+    <Application.Resources>
+        <!-- Application resource dictionary -->
+
+        <ResourceDictionary>
+
+            <!-- COLORS -->
+            <Color x:Key="DefaultTextColor">#73879C</Color>
+            <Color x:Key="WhiteColor">#ffffff</Color>
+            <Color x:Key="BlackColor">#000000</Color>
+            <Color x:Key="BackgroundColor">#F4F6FA</Color>
+            <Color x:Key="MasterBackgroundColor">#2E8B57</Color>
+            <Color x:Key="MasterMenuTextColor">#E7E7E7</Color>
+            <Color x:Key="ButtonBackgroundColor">#228B22</Color>
+            <Color x:Key="ListViewSelectedColor">#C0C0C0</Color>
+
+            <Color x:Key="ErrorColor">#ff5252</Color>
+            <Color x:Key="TextColor">#757575</Color>
+
+
+            <!-- CONVERTERS -->
+            <converters:ItemTappedEventArgsConverter x:Key="ItemTappedEventArgsConverter" />
+
+
+             <!-- EXPLICIT STYLES -->
+            <Style x:Key="ValidationErrorLabelStyle"
+                   TargetType="{x:Type Label}">
+                <Setter Property="TextColor"
+                           Value="{StaticResource ErrorColor}" />
+                <Setter Property="FontSize"
+                           Value="Small" />
+            </Style>
+            
+            <Style x:Key="EntryStyle"
+                   TargetType="{x:Type Entry}">
+                <Setter Property="TextColor"
+                        Value="{StaticResource DefaultTextColor}" />
+                <Setter Property="PlaceholderColor"
+                        Value="{StaticResource BlackColor}" />
+                <Setter Property="FontSize"
+                        Value="Medium" />
+                <Setter Property="HorizontalOptions"
+                        Value="FillAndExpand" />
+                <Setter Property="FontAttributes"
+                        Value="Bold" />
+                <Setter Property="HeightRequest"
+                        Value="38"/>
+                <Setter Property="BackgroundColor" 
+                        Value="Transparent" />
+                <Setter Property="Opacity"
+                        Value="0.8" />
+                <Style.Triggers>
+                    <Trigger TargetType="Entry"
+                             Property="IsFocused" 
+                             Value="True">
+                        <Setter Property="Opacity" Value="1" />
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+
+        </ResourceDictionary>
+        
+    </Application.Resources>
+</prism:PrismApplication>

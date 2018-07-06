@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:XamarinSample"
+    xmlns:scroll="clr-namespace:XamarinSample.Extend"
+    xmlns:views="clr-namespace:XamarinSample.Views"
+    xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms" 
+    prism:ViewModelLocator.AutowireViewModel="True" 
+    xmlns:prismBehaviors="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
+    xmlns:iconize="clr-namespace:FormsPlugin.Iconize;assembly=FormsPlugin.Iconize"
+    x:Class="XamarinSample.Views.Master.MasterView"
+    Title="Sample">
+    
+
+    <StackLayout Orientation="Vertical" BackgroundColor="{StaticResource MasterBackgroundColor}">
+        <StackLayout>
+             <ListView RowHeight="60"
+                       SeparatorVisibility="None">
+                <ListView.Behaviors>
+                    <prismBehaviors:EventToCommandBehavior
+                        EventName="ItemTapped"
+                        Command="{Binding ItemTappedCommand}"
+                        EventArgsConverter="{StaticResource ItemTappedEventArgsConverter}">
+                    </prismBehaviors:EventToCommandBehavior>
+                </ListView.Behaviors>
+
+                <ListView.ItemsSource>
+                    <x:Array Type="{x:Type local:MasterViewItem}">
+                        <local:MasterViewItem Title="Account" IconSource="fa-user" TargetType="{x:Type views:Slide.AccountView}"/>
+                        <local:MasterViewItem Title="Setup" IconSource="fa-cog" TargetType="{x:Type views:Slide.SetupView}"/>
+                    </x:Array>
+                </ListView.ItemsSource>
+
+                 <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <scroll:ListViewCell StyleId="none" SelectedBackgroundColor="#228B22">
+                            <StackLayout  
+                                BackgroundColor="{StaticResource MasterBackgroundColor}"
+                                VerticalOptions="FillAndExpand"
+                                Orientation="Horizontal"
+                                Padding="20,10,0,10"
+                                Spacing="20">
+
+                                <iconize:IconImage Icon="{Binding IconSource}" IconColor="{StaticResource WhiteColor}"
+                                                   WidthRequest="25" HeightRequest="25"
+                                                   VerticalOptions="Center" StyleClass="Circle" />
+
+                                <Label Text="{Binding Title}"
+                                       FontSize="Medium"
+                                       VerticalOptions="Center"
+                                       TextColor="{StaticResource WhiteColor}"/>
+                            </StackLayout>
+                        </scroll:ListViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                
+            </ListView>
+        </StackLayout>
+        
+    </StackLayout>
+        
+</ContentPage>

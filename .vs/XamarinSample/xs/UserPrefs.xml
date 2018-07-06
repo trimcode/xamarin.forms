@@ -1,0 +1,31 @@
+﻿<Properties StartupConfiguration="{C492969D-27C4-4487-806A-5CB47EAEC2B9}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Droid/Extends/ListViewCellRenderer.cs">
+    <Files>
+      <File FileName="XamarinSample/Views/LoginView.xaml" Line="127" Column="1" />
+      <File FileName="XamarinSample/Behaviors/EntryValidationBehavior.cs" Line="40" Column="18" />
+      <File FileName="XamarinSample/App.xaml.cs" Line="29" Column="9" />
+      <File FileName="XamarinSample/Views/LoginView.xaml.cs" Line="16" Column="1" />
+      <File FileName="XamarinSample/App.xaml" Line="71" Column="1" />
+      <File FileName="XamarinSample/ViewModel/LoginViewModel.cs" Line="48" Column="2" />
+      <File FileName="XamarinSample/ViewModel/Base/ViewModelBase.cs" Line="12" Column="1" />
+      <File FileName="XamarinSample/Model/LoginObj.cs" Line="16" Column="1" />
+      <File FileName="XamarinSample/Views/MainIconTabbedPage.cs" Line="15" Column="56" />
+      <File FileName="XamarinSample/Views/Master/MasterDetailView.xaml" Line="39" Column="1" />
+      <File FileName="XamarinSample/Views/Master/MasterView.xaml" Line="64" Column="1" />
+      <File FileName="XamarinSample/Extend/CustomNavigationPage.cs" Line="9" Column="61" />
+      <File FileName="iOS/Extends/MainIconTabbedPageRenderer.cs" Line="1" Column="1" />
+      <File FileName="Droid/Extends/ListViewCellRenderer.cs" Line="14" Column="57" />
+      <File FileName="Droid/MainActivity.cs" Line="13" Column="11" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.XamarinSample.Droid PreferredExecutionTarget="Android.android-5.1" AndroidDesignerPreferredTheme="Theme.DeviceDefault.NoActionBar.Fullscreen" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.XamarinSample.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.CD9FFEAE-800C-4396-A3FB-F6F7853BC39B">
+    <MonoDevelop.MacDev.AppleDevelopmentTeam />
+  </MonoDevelop.Ide.ItemProperties.XamarinSample.iOS>
+  <MultiItemStartupConfigurations />
+</Properties>
